@@ -1,0 +1,33 @@
+1. Explique as principais diferenças entre programação estruturada/modular e programação orientada a objetos.
+    Programaçao Estruturada/Modular
+        Foco na divisão do programa em módulos, funções e procedimentos.
+        Ênfase na lógica de execução sequencial do programa.
+        Dados e funções são tratados de forma separada.
+        Reutilização de código é feita através de chamadas a funções.
+    POO
+        Foco na modelagem de entidades (objetos) e suas interações.
+        Ênfase na organização do código em torno de objetos que encapsulam dados (atributos) e comportamentos (métodos).
+        Conceitos importantes: classes, objetos, herança, polimorfismo, encapsulamento.
+        Reutilização de código é feita através da criação de novas classes e objetos.
+
+2. Diferença entre classe e objeto
+    Classe
+        E um modelo que define as caracteristicas(atributos) e comportamentos(metodos) de um tipo de objeto
+        Serve como uma "receita" para a criaç~ao de objetos
+    Objeto
+        É uma instância de uma classe, ou seja, uma entidade concreta que possui os atributos e comportamentos definidos pela classe.
+        Cada objeto tem seu próprio estado (valores dos atributos) e pode interagir com outros objetos.
+
+3. Definições de atributo de objeto, atributo de classe, método de objeto e método de classe:
+    Atributo de objeto:
+        São as propriedades ou características específicas de cada objeto.
+        Os valores desses atributos podem variar de objeto para objeto.
+    Atributo de classe:
+        São as propriedades ou características compartilhadas por todos os objetos de uma mesma classe.
+        Geralmente são declarados como estáticos (static) e pertencem à classe, não a um objeto específico.
+    Método de objeto:
+        São os comportamentos ou ações que um objeto pode realizar.
+        Esses métodos operam sobre os atributos do objeto e podem acessar e modificar seus valores.
+    Método de classe:
+        São os comportamentos ou ações que pertencem à classe e podem ser invocados sem a necessidade de criar um objeto.
+        Esses métodos geralmente lidam com informações ou operações relacionadas à própria classe, não a um objeto específico.
