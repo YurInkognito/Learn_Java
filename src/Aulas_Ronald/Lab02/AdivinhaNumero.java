@@ -1,4 +1,4 @@
-package Lab02;
+package Aulas_Ronald.Lab02;
 
 import java.util.Scanner;
 

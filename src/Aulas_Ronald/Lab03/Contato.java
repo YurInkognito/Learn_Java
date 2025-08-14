@@ -1,4 +1,4 @@
-package Lab03;
+package Aulas_Ronald.Lab03;
 
 public class Contato {
     private String nome;

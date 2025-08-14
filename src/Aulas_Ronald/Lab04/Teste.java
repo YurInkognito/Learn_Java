@@ -1,4 +1,4 @@
-package Lab04;
+package Aulas_Ronald.Lab04;
 
 public class Teste{
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lab02;
+package Aulas_Ronald.Lab02;
 public class Funcionario {
     private String nome;
     private double salarioHora;

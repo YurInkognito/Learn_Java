@@ -1,5 +1,4 @@
-package Lab03;
-import java.util.Scanner;
+package Aulas_Ronald.Lab03;
 
 //Driver class - ponto de entrada da execução do código.
 public class Teste{
