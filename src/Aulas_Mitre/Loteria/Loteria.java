@@ -1,7 +1,4 @@
-package Aulas_Mitre;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+package Aulas_Mitre.Loteria;
 
 public class Loteria {
     private int MAX = 10;

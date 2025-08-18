@@ -1,4 +1,4 @@
-package Aulas_Mitre;
+package Aulas_Mitre.Loteria;
 
 public class Pessoa {
 
