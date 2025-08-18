@@ -1,48 +1,32 @@
 package Aulas_Mitre.Loteria;
 
+import java.util.Random;
+import java.util.ArrayList;
+
 public class Loteria {
-    private int MAX = 10;
-    private int MIN = 1;
-    private int num_sorteado;
-    private Pessoa []bilhetes;
-    public Loteria(){
-        bilhetes = new Pessoa[MAX];
-    }
-    public void vender(Pessoa p1, int num){
-        if(num >= MIN && num <= MAX && bilhetes[num-1] == null){
-            bilhetes[num-1] = p1;
-            p1.setBilhete(num);
-        }
-        else{
-            System.out.println("Número invalido ou já vendido.");
-        }
-    }
-    public void sorteio{
-        int num = (int(Math.random()*(MAX-MIN +1) + MIN));
-        System.out.println("O número soeteado foi: "+num);
-        this.num_sorteado = num;
-        if(bilhetes[num-1]!=null){
-            System.out.println("O gahador foi: "+bilhetes[num-1].getId());
-        }
-        else{
-            System.out.println("Nãi houve ganhador");
-        }
+    private int numeroSorteado;
+    private ArrayList<Pessoa> participantes = new ArrayList<>();
+
+    public void adicionarParticipante(Pessoa p) {
+        participantes.add(p);
     }
 
+    public void sortearNumero(int limite) {
+        Random rand = new Random();
+        numeroSorteado = rand.nextInt(limite) + 1; // sorteia de 1 até limite
+        System.out.println("Número sorteado: " + numeroSorteado);
+    }
 
-
-//    private List<Integer> numerosDisponiveis = new ArrayList<>();
-//
-//    public Loteria() {
-//        // Cria bilhetes de 1 a 10
-//        for (int i = 1; i <= 10; i++) {
-//            numerosDisponiveis.add(i);
-//        }
-//    }
-//
-//    public int sortearNumero() {
-//        Random rand = new Random();
-//        return rand.nextInt(10) + 1; // número entre 1 e 10
-//    }
+    public void verificarGanhador() {
+        boolean houveGanhador = false;
+        for (Pessoa p : participantes) {
+            if (p.getNumeroEscolhido() == numeroSorteado) {
+                System.out.println("🎉 " + p.getNome() + " ganhou a loteria!");
+                houveGanhador = true;
+            }
+        }
+        if (!houveGanhador) {
+            System.out.println("Ninguém ganhou desta vez.");
+        }
+    }
 }
-

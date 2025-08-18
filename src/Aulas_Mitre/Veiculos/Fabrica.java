@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fabrica {
-    private List<Carro> carros = new ArrayList<>();
-    private List<Moto> motos = new ArrayList<>();
+    private final List<Carro> carros = new ArrayList<>();
+    private final List<Moto> motos = new ArrayList<>();
     private double saldo;
-    private ControleChassi controleChassi;
+    private final ControleChassi controleChassi;
 
     public Fabrica(double saldoInicial) {
         this.saldo = saldoInicial;
@@ -21,9 +21,9 @@ public class Fabrica {
             carro.setChassi(chassi);
             carros.add(carro);
             saldo -= custo;
-            System.out.println("Carro fabricado: " + modelo + " | Chassi: " + chassi);
+            System.out.println("✅ Carro fabricado: " + modelo + " | Chassi: " + chassi);
         } else {
-            System.out.println("Saldo insuficiente para fabricar carro.");
+            System.out.println("❌ Saldo insuficiente para fabricar carro.");
         }
     }
 
@@ -34,19 +34,22 @@ public class Fabrica {
             moto.setChassi(chassi);
             motos.add(moto);
             saldo -= custo;
-            System.out.println("Moto fabricada: " + modelo + " | Chassi: " + chassi);
+            System.out.println("✅ Moto fabricada: " + modelo + " | Chassi: " + chassi);
         } else {
-            System.out.println("Saldo insuficiente para fabricar moto.");
+            System.out.println("❌ Saldo insuficiente para fabricar moto.");
         }
     }
 
     public void imprimirContabilidade() {
         System.out.println("\n===== CONTABILIDADE =====");
         System.out.println("Saldo: R$ " + saldo);
-        System.out.println("Carros fabricados:");
+
+        System.out.println("\n--- Carros fabricados ---");
+        if (carros.isEmpty()) System.out.println("Nenhum carro fabricado.");
         for (Carro c : carros) c.imprimir_dados();
-        System.out.println("Motos fabricadas:");
+
+        System.out.println("\n--- Motos fabricadas ---");
+        if (motos.isEmpty()) System.out.println("Nenhuma moto fabricada.");
         for (Moto m : motos) m.imprimir_dados();
     }
 }
-

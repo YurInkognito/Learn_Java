@@ -1,39 +1,24 @@
 package Aulas_Mitre.Loteria;
 
 public class Pessoa {
+    private String nome;
+    private int numeroEscolhido;
 
-    private int id;
-    private int bilhete;
-    public Pessoa(int id){
-        this.id = id;
-    }
-    public int getId(){
-        return this.id;
-    }
-    public void setBilhete(int num){
-        this.bilhete = num;
-    }
-    public int getBilhete(){
-        return this.bilhete;
+    public Pessoa(String nome, int numeroEscolhido) {
+        this.nome = nome;
+        this.numeroEscolhido = numeroEscolhido;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
-//    private int id;
-//    private int bilhete; // número do bilhete comprado
-//
-//    public Pessoa(int id) {
-//        this.id = id;
-//    }
-//
-//    public void comprarBilhete(int numero) {
-//        this.bilhete = numero;
-//    }
-//
-//    public int getBilhete() {
-//        return bilhete;
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
+    public int getNumeroEscolhido() {
+        return numeroEscolhido;
+    }
+
+    @Override
+    public String toString() {
+        return nome + " escolheu o número " + numeroEscolhido;
+    }
 }
